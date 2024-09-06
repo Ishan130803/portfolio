@@ -39,7 +39,7 @@ function AboutSection({}: AboutSectionProps) {
   return (
     <section className="text-white">
       <div className="grid grid-cols-2 gap-8 place-items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src={""} alt="About Image" width={500} height={500}></Image>
+        <Image src={"/ishan-photo.jpg"} alt="About Image" width={500} height={500}></Image>
         <div>
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -47,7 +47,7 @@ function AboutSection({}: AboutSectionProps) {
             Repudiandae dolorum consequuntur, ex amet cum corrupti harum
             eligendi minima numquam repellat, id quae aliquam!
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row mt-8 h-full">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}

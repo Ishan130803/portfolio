@@ -5,6 +5,7 @@ import { ReactNode, useState } from "react";
 import { Navlink } from "./Navlink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { MenuOverlay } from "./MenuOverlay";
+import { MyLOGO } from "./MyLOGO";
 
 type NavbarProps = {};
 
@@ -26,13 +27,13 @@ const navlinks = [
 function Navbar({}: NavbarProps) {
   const [navBarOpen, setNavBarOpen] = useState<boolean>(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 opacity-100 mx-auto bg-[#121212]">
-      <div className="flex flex-wrap justify-between items-center mx-auto p-8">
+    <nav className="fixed top-0 left-0 right-0 z-10 mx-auto bg-[#121212]">
+      <div className="flex flex-wrap justify-between items-center mx-auto p-6">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-4xl text-white font-semibold"
         >
-          LOGO
+          <MyLOGO />
         </Link>
         <div className="mobile-menu block md:hidden">
           {navBarOpen ? (
@@ -59,8 +60,8 @@ function Navbar({}: NavbarProps) {
           <ul className="flex p-4 md:p-0 flex-row md:flex-row md:space-x-8 mt-0">
             {navlinks.map((value, index) => {
               return (
-                <li>
-                  <Navlink {...value} key={index}></Navlink>
+                <li key={index}>
+                  <Navlink {...value}></Navlink>
                 </li>
               );
             })}

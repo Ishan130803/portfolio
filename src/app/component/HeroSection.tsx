@@ -16,9 +16,12 @@ function HeroSection() {
               sequence={[
                 "Ishan Srivastava",
                 1000,
+                "Programmer",
+                1000,
                 "Web Developer",
                 1000,
                 "ML Expert",
+                1000,
               ]}
               wrapper="span"
               speed={50}
@@ -44,10 +47,11 @@ function HeroSection() {
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full bg-[#181818] w-[300px] h-[300px] relative">
+          <div className="rounded-full bg-[#181818] w-[300px] h-[300px] relative overflow-clip">
             <Image
+              className="object-contain"
               alt={"My Image"}
-              src={"/favicon.ico"}
+              src={"/Hero-Placeholder.png"}
               width={300}
               height={300}
             ></Image>
