@@ -17,7 +17,7 @@ function ProjectCard({ image_url, title, description }: ProjectCardProps) {
     <div>
       <div
         className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${image_url})`, backgroundSize: "cover" }}
+        style={{ background: `url(${image_url})`, backgroundSize: "contain" }}
       >
         <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] hidden group-hover:flex group-hover:opacity-80 transition-all duration-1000 items-center justify-center rounded-t-xl">
           <Link href={"/"} className="cursor-pointer rounded-full group/link ">

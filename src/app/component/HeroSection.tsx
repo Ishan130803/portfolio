@@ -20,7 +20,9 @@ function HeroSection() {
                 1000,
                 "Web Developer",
                 1000,
-                "ML Expert",
+                "ML Engineer",
+                1000,
+                "Researcher",
                 1000,
               ]}
               wrapper="span"
@@ -30,19 +32,15 @@ function HeroSection() {
             <br />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-            quisquam. Aliquam deleniti laboriosam ducimus, sunt totam odit
-            magnam? Provident perspiciatis ipsa assumenda perferendis ad sunt
-            delectus commodi sequi hic similique quo exercitationem culpa quidem
-            beatae, quas at harum eos placeat dolorem. Aspernatur, nesciunt?
+            Hello There! I am Ishan Srivastava. This is my portfolio Website. Currently, it is Work in progress. To check out my work visit my Github and LinkedIn profiles. Link to both is present on the bottom of this page under the Let's connect Section
           </p>
 
           <div>
-            <button className="px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:bg-slate-200 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white">
-              Hire Me!
+            <button className="px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:bg-slate-200 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-medium">
+            Download CV
             </button>
-            <button className="px-6 py-3 rounded-full mr-4 w-full sm:w-fit hover:bg-slate-800 bg-transparent text-white border border-white mt-3">
-              Hire Me!
+            <button className="hidden px-6 py-3 rounded-full mr-4 w-full sm:w-fit hover:bg-slate-800 bg-transparent text-white border border-white mt-3">
+              Hire Me
             </button>
           </div>
         </div>
