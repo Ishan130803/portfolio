@@ -24,7 +24,10 @@ function EmailSection() {
   };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4" id="connect">
+    <section
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
+      id="connect"
+    >
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ABD7BE] mb-4 max-w-md">
@@ -36,8 +39,13 @@ function EmailSection() {
           <Link
             href={"https://github.com/Ishan130803"}
             className="rounded-full hover:bg-slate-700 relative flex flex-col group/icon"
+            target="_blank"
           >
-            <Image src={GitHubIcon} alt="GitHubIcon" className="peer/icon"></Image>
+            <Image
+              src={GitHubIcon}
+              alt="GitHubIcon"
+              className="peer/icon"
+            ></Image>
             <span className="bg-slate-800 opacity-0 text-white rounded-md py-1 px-2 absolute self-center mt-14 peer-hover/icon:block peer-hover/icon:opacity-100 transition-opacity duration-300">
               GitHub
             </span>
@@ -45,7 +53,7 @@ function EmailSection() {
           <Link
             href={"https://www.linkedin.com/in/ishan-srivastava-baa7a3276"}
             className="rounded-lg hover:bg-slate-700 relative flex flex-col group/icon"
-            
+            target="_blank"
           >
             <Image
               className="peer/icon"

@@ -20,8 +20,8 @@ const projectsData: IProjectsData[] = [
     description: "This is my personal portfolio website",
     image: "/portfolio.png",
     tag: ["All", "web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Ishan130803/portfolio",
+    previewUrl: "https://github.com/Ishan130803/portfolio",
   },
   // {
   //   id: 2,

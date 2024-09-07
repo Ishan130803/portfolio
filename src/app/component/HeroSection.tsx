@@ -1,5 +1,8 @@
 "use client";
+import { ArrowDownIcon, ArrowDownLeftIcon } from "@heroicons/react/24/solid";
+import { DownloadIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 function HeroSection() {
@@ -32,13 +35,16 @@ function HeroSection() {
             <br />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl">
-            Hello There! I am Ishan Srivastava. This is my portfolio Website. Currently, it is Work in progress. To check out my work visit my Github and LinkedIn profiles. Link to both is present on the bottom of this page under the Let's connect Section
+            Hello There! I am Ishan Srivastava. This is my portfolio Website.
+            Currently, it is Work in progress. To check out my work visit my
+            Github and LinkedIn profiles. Link to both is present on the bottom
+            of this page under the Let's connect Section
           </p>
 
           <div>
-            <button className="px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:bg-slate-200 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-medium">
-            Download CV
-            </button>
+            <Link className="flex justify-center items-center gap-1 px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:bg-slate-200 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-medium" target="_blank" href={"https://drive.google.com/file/d/1HN7HMh1HJYGpapCvL7QDRioU0zjYEFBK/view?usp=drive_link"}>
+              <span>Resume</span> <DownloadIcon className=" text-white h-4 font-bold"></DownloadIcon>
+            </Link>
             <button className="hidden px-6 py-3 rounded-full mr-4 w-full sm:w-fit hover:bg-slate-800 bg-transparent text-white border border-white mt-3">
               Hire Me
             </button>

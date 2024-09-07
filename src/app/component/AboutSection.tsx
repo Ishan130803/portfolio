@@ -50,7 +50,7 @@ function AboutSection({}: AboutSectionProps) {
       ></Image>
       <div>
         <h2 className="text-4xl font-bold mb-4">About Me</h2>
-        <p className="text-base lg:text-lg">
+        <div className="text-base lg:text-lg">
           <p>
             I am Ishan Srivastava, a student of Delhi Technological University,
             New Delhi currently pursuing Information Technology. I am also an
@@ -65,7 +65,7 @@ function AboutSection({}: AboutSectionProps) {
             Currently, I'm exploring research opportunities in remote sensing
             data, eager to expand my expertise even further.
           </p>
-        </p>
+        </div>
         <div className="flex flex-row mt-8 h-full">
           <TabButton
             selectTab={() => handleTabChange("skills")}
