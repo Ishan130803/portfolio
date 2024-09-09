@@ -10,7 +10,7 @@ type TabButtonProps = {
 
 function TabButton({ active, selectTab, children }: TabButtonProps) {
   const buttonClasses = active
-    ? "text-white border-b border-purple-500"
+    ? "text-white border-b-2 border-purple-500"
     : "text-[#ADB7BE]";
   return (
     <button onClick={selectTab}>

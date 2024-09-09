@@ -2,9 +2,13 @@
 import Image from "next/image";
 import GitHubIcon from "@/../public/github-icon.svg";
 import LinkedInIcon from "@/../public/linkedin.svg";
+// import InstagramIcon from "@/../public/instagram.svg";
 
 import Link from "next/link";
 import { send_email } from "@/utils/autoemail";
+import { EmailSectionIcon } from "./EmailSectionIcon";
+import { InstagramIcon, MailIcon } from "lucide-react";
+import { CopyToClipboardButton } from "./CopyToClipboardButton";
 
 function EmailSection() {
   const handleSubmit = async (e: any) => {
@@ -30,44 +34,59 @@ function EmailSection() {
     >
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
-        <p className="text-[#ABD7BE] mb-4 max-w-md">
+        <p className="text-[#ADB7BE] mb-4 max-w-md">
           I'am currently looking for opportunities, my inbox is always open.
           Whether you have a question or just want to say hi, I'll try my best
           to get back to you !
         </p>
+        <span className="font-medium text-[#ADB7BE] flex gap-1">
+          <span>Email : ishan130803@gmail.com</span>
+          <CopyToClipboardButton className="text-[#ADB7BE] h-4 self-center hover:text-white font-bold" text="ishan130803@gmail.com"></CopyToClipboardButton>
+        </span>
+
+
         <div className="socials flex flex-row gap-2">
+          <EmailSectionIcon
+            alt="GitHubIcon"
+            href="https://github.com/Ishan130803"
+            name="Github"
+            src={GitHubIcon}
+          ></EmailSectionIcon>
+          <EmailSectionIcon
+            alt="LinkedInIcon"
+            href={"https://www.linkedin.com/in/ishan-srivastava-baa7a3276"}
+            name="LinkedIn"
+            src={LinkedInIcon}
+          ></EmailSectionIcon>
           <Link
-            href={"https://github.com/Ishan130803"}
-            className="rounded-full hover:bg-slate-700 relative flex flex-col group/icon"
+            href={"https://www.mail.google.com/ishan130803@gmail.com"}
+            className="rounded-lg hover:bg-slate-700 relative flex flex-col justify-center group/icon"
             target="_blank"
           >
-            <Image
-              src={GitHubIcon}
-              alt="GitHubIcon"
-              className="peer/icon"
-            ></Image>
-            <span className="bg-slate-800 opacity-0 text-white rounded-md py-1 px-2 absolute self-center mt-14 peer-hover/icon:block peer-hover/icon:opacity-100 transition-opacity duration-300">
-              GitHub
+            <MailIcon className="text-white h-[2.90rem]  w-full peer/icon p-1" />
+            <span className="bg-slate-800 opacity-0 text-white rounded-md py-1 px-2 absolute self-center mt-24 peer-hover/icon:block peer-hover/icon:opacity-100 transition-opacity duration-300">
+              ishan130803@gmail.com
             </span>
           </Link>
           <Link
-            href={"https://www.linkedin.com/in/ishan-srivastava-baa7a3276"}
+            href={"https://www.instagram.com/i_shan_1308/"}
             className="rounded-lg hover:bg-slate-700 relative flex flex-col group/icon"
             target="_blank"
           >
-            <Image
-              className="peer/icon"
-              src={LinkedInIcon}
-              alt="LinkedInIcon"
-            ></Image>
+            <InstagramIcon className="text-white h-[2.90rem]  w-full peer/icon p-1" />
             <span className="bg-slate-800 opacity-0 text-white rounded-md py-1 px-2 absolute self-center mt-14 peer-hover/icon:block peer-hover/icon:opacity-100 transition-opacity duration-300">
-              LinkedIn
+              Instagram
             </span>
           </Link>
         </div>
       </div>
       <div>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+        {/* <form
+          // action="https://formsubmit.co/c2db1482659cf5b7eb03930895bdde58"
+          // method="POST"
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-6"
+        >
           <div>
             <label
               htmlFor="email"
@@ -122,7 +141,7 @@ function EmailSection() {
             {" "}
             Send Message
           </button>
-        </form>
+        </form> */}
       </div>
     </section>
   );

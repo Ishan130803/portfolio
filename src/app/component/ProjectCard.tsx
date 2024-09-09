@@ -16,8 +16,8 @@ function ProjectCard({ image_url, title, description, git_url, preview_url }: Pr
   return (
     <div>
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${image_url})`, backgroundSize: "contain" }}
+        className="h-52 md:h-72 rounded-t-xl relative group bg-contain-"
+        style={{ background: `url(${image_url})`}}
       >
         <div className="overlay flex absolute top-0 left-0 w-full h-full bg-[#181818] opacity-0 group-hover:flex group-hover:opacity-80 transition-all duration-300 items-center justify-center rounded-t-xl">
           <Link href={git_url} target="_blank" className="cursor-pointer rounded-full group/link flex flex-col items-center">

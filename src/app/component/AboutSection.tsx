@@ -38,13 +38,13 @@ function AboutSection({}: AboutSectionProps) {
 
   return (
     <section
-      className="text-white grid grid-cols-2 gap-8 place-items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16"
+      className="text-white grid md:grid-cols-2 gap-8 place-items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16"
       id="about"
     >
       <Image
         src={"/ishan-photo.jpg"}
         alt="About Image"
-        className="rounded-xl"
+        className="my-image rounded-xl"
         width={500}
         height={500}
       ></Image>
