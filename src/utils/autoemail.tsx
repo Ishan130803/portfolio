@@ -1,11 +1,7 @@
 "use server";
 
-import { error } from "console";
-import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const myEmail = process.env.MY_EMAIL! as string;
 
 type Isend_email = {
   client_email: string;
@@ -13,9 +9,6 @@ type Isend_email = {
   message: string;
 };
 export async function send_email({
-  client_email,
-  subject,
-  message,
 }: Isend_email) {
   try {
     const res = await fetch(

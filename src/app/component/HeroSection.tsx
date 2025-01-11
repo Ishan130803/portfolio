@@ -1,5 +1,5 @@
 "use client";
-import { ArrowDownIcon, ArrowDownLeftIcon } from "@heroicons/react/24/solid";
+import { RESUME_LINK } from "@/lib/config";
 import { DownloadIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 
 function HeroSection() {
   return (
-    <section>
+    <section className="px-24 py-12 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl">
@@ -38,12 +38,17 @@ function HeroSection() {
             Hello There! I am Ishan Srivastava. This is my portfolio Website.
             Currently, it is Work in progress. To check out my work visit my
             Github and LinkedIn profiles. Link to both is present on the bottom
-            of this page under the Let's connect Section
+            of this page under the Let&apos;s connect Section
           </p>
 
           <div>
-            <Link className="flex justify-center items-center gap-1 px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:bg-slate-200 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-medium" target="_blank" href={"https://drive.google.com/file/d/1HN7HMh1HJYGpapCvL7QDRioU0zjYEFBK/view?usp=drive_link"}>
-              <span>Resume</span> <DownloadIcon className=" text-white h-4 font-bold"></DownloadIcon>
+            <Link
+              className="flex justify-center items-center gap-1 px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-white hover:via-purple-600 hover:to-pink-600 mt-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-medium"
+              target="_blank"
+              href={RESUME_LINK}
+            >
+              <span>Resume</span>{" "}
+              <DownloadIcon className=" text-white h-4 font-bold"></DownloadIcon>
             </Link>
             <button className="hidden px-6 py-3 rounded-full mr-4 w-full sm:w-fit hover:bg-slate-800 bg-transparent text-white border border-white mt-3">
               Hire Me

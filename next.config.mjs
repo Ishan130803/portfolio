@@ -12,6 +12,18 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'github.com',
+        pathname: '/**',
+      },
+      {
+        hostname: 'private-user-images.githubusercontent.com',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

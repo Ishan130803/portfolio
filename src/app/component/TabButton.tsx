@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEvent, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type TabButtonProps = {
   active: boolean;

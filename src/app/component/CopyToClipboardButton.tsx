@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { CopyCheck, CopyIcon } from "lucide-react";
 import { HTMLAttributes, useState } from "react";
 
@@ -22,21 +23,21 @@ function CopyToClipboardButton({ text, ...props }: CopyToClipboardButtonProps) {
   };
 
   const buttonStyle = isCopied
-    ? "text-green-700 h-4 self-center hover:text-green-500 font-bold"
-    : "text-[#ADB7BE] h-4 self-center hover:text-white font-bold";
+    ? "text-green-700 self-center hover:text-green-500 font-bold"
+    : "text-[#ADB7BE] self-center hover:text-white font-bold";
 
   return (
     <>
       {isCopied ? (
         <CopyCheck
           {...props}
-          className={buttonStyle}
+          className={cn(buttonStyle, props.className)}
           onClick={handleCopy}
         ></CopyCheck>
       ) : (
         <CopyIcon
           {...props}
-          className={buttonStyle}
+          className={cn(buttonStyle, props.className)}
           onClick={handleCopy}
         ></CopyIcon>
       )}

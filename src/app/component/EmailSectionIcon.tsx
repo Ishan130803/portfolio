@@ -3,12 +3,12 @@ import Link from "next/link";
 
 type EmailSectionIconProps = {
   href: string;
-  src: any;
+  src: string;
   alt: string;
   name: string;
 };
 
-function EmailSectionIcon({href, src , alt, name}: EmailSectionIconProps) {
+function EmailSectionIcon({ src , alt, name}: EmailSectionIconProps) {
   return (
     <Link
       href={"https://www.linkedin.com/in/ishan-srivastava-baa7a3276"}
