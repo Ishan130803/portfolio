@@ -6,12 +6,11 @@ import { ArrowRight, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import React, { Dispatch, SetStateAction } from "react";
-import { cn } from "@/lib/utils";
 import { FaGithub, FaKaggle } from "react-icons/fa";
 import { ImSphere } from "react-icons/im";
 import { Dialog, DialogHeader, DialogContent } from "./ui/dialog";
 import Link from "next/link";
-import { DialogProps } from "@radix-ui/react-dialog";
+import { DialogProps, DialogTitle } from "@radix-ui/react-dialog";
 import { AvatarGroup } from "./avatar-group";
 import { techstackIcons } from "./techstack-icons";
 import {
@@ -61,11 +60,7 @@ function ProjectCard(props: ProjectCardProps) {
 
   return (
     <TooltipProvider>
-      <div
-        className={cn("flex flex-col size-full bg-[#101010] rounded-xl", {
-          "": isExpanded,
-        })}
-      >
+      <div className="flex flex-col size-full bg-[#101010] rounded-xl justify-between">
         <ProjectDialog {...props} open={isExpanded} />
         <div className="w-full h-52 flex items-center justify-center relative">
           {project_image ? (
@@ -79,11 +74,12 @@ function ProjectCard(props: ProjectCardProps) {
             <ImageIcon className="text-[#A1A1A1]" />
           )}
         </div>
-        <div className="flex flex-col h-52 bg-[#080808] rounded-b-xl p-4 text-[#E5E5E5] font-sans">
+        <div className="flex flex-col h-60 bg-[#080808] rounded-b-xl p-4 text-[#E5E5E5] font-sans">
           <h6 className="text-[#E5E5E5] text-xl font-bold  my2">
             {project_title ?? "Project Title"}
           </h6>
-          <p className="line-clamp-3 my-2">{project_description}</p>
+          <p className="line-clamp-3 pt-2">{project_description}</p>
+          <div className="grow"></div>
           <div className="flex justify-between items-center">
             {techstackIconGroupComponent}
             <Button
@@ -159,7 +155,7 @@ function ProjectDialog({
     <Dialog modal open={open} onOpenChange={() => setIsExpanded(-1)}>
       <DialogContent className="text-[#E5E5E5]  bg-[#121212] border-none overflow-auto max-h-[90vh] w-[95vw] max-w-7xl flex flex-col justify-start p-8">
         <DialogHeader className="font-bold text-3xl bg-gradient-to-br from-purple-400 to-pink-600 bg-clip-text text-transparent">
-          {project_title ?? "ProjectTitle"}
+          <DialogTitle>{project_title ?? "ProjectTitle"}</DialogTitle>
         </DialogHeader>
         <span
           className=" h-2 my-4 border-white/25"
@@ -225,15 +221,13 @@ function ProjectDialog({
             borderTopWidth: "1px",
           }}
         />
-        <div>
-          {readme_text ? (
-            <MarkdownRenderer className="prose prose-a:text-blue-800 prose-p:text-white prose-headings:text-pink-300  prose-ol:text-white">
-              {readme_text}
-            </MarkdownRenderer>
-          ) : (
-            project_content
-          )}
-        </div>
+        {readme_text ? (
+          <MarkdownRenderer className="w-full prose prose-a:text-blue-800 prose-p:text-white prose-headings:text-pink-300  prose-ol:text-white">
+            {readme_text}
+          </MarkdownRenderer>
+        ) : (
+          project_content
+        )}
       </DialogContent>
     </Dialog>
   );
@@ -252,7 +246,7 @@ function ProjectLinkButton({
   title,
 }: ProjectLinkButtonProps) {
   return (
-    <Link className="contents" href={href ?? "/"}>
+    <Link className="contents" href={href ?? "/"} target="_blank">
       <Button className={className}>
         {Icon}
         <span>{title}</span>

@@ -9,7 +9,7 @@ import {
   KAGGLE_URL,
   LINKEDIN_URL,
   MY_EMAIL,
-} from "@/lib/config";
+} from "@/data/personal-data";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { FaGithub, FaKaggle, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -50,19 +50,19 @@ function EmailSection() {
               Explore more about me...
             </span>
             <div className="flex w-full gap-4 flex-wrap">
-              <Link href={LINKEDIN_URL} className="contents">
+              <Link href={LINKEDIN_URL} className="contents" target="_blank">
                 <Button className="flex items-center justify-center text-white border-none grow flex-1">
                   <FaLinkedin className="text-white text-2xl h-32" />
                   <span>Linked In</span>
                 </Button>
               </Link>
-              <Link href={INSTAGRAM_URL} className="contents">
+              <Link href={INSTAGRAM_URL} className="contents" target="_blank">
                 <Button className="grow  flex-1 flex items-center justify-center text-white border-none bg-gradient-to-br from-pink-700 to-indigo-500 hover:to-pink-700 hover:from-pink-700 transition-colors duration-500 ">
                   <FaInstagram className="" />
                   <span>Instagram</span>
                 </Button>
               </Link>
-              <Link href={GITHUB_URL} className="contents">
+              <Link href={GITHUB_URL} className="contents" target="_blank">
                 <Button
                   variant="outline"
                   className="grow flex flex-1 items-center justify-center text-white bg-[#121212] hover:bg-[#222222] hover:text-white"
@@ -71,7 +71,7 @@ function EmailSection() {
                   <span>Github</span>
                 </Button>
               </Link>
-              <Link href={KAGGLE_URL} className="contents">
+              <Link href={KAGGLE_URL} className="contents" target="_blank">
                 <Button
                   variant="outline"
                   className="grow flex flex-1 items-center justify-center text-white border-none bg-gradient-to-t from-cyan-700 to-cyan-600 hover:to-cyan-700 hover:text-white"

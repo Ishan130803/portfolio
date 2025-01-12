@@ -1,5 +1,5 @@
 "use client";
-import { RESUME_LINK } from "@/lib/config";
+import { RESUME_LINK } from "@/data/personal-data";
 import { DownloadIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

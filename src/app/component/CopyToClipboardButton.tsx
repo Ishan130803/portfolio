@@ -28,19 +28,22 @@ function CopyToClipboardButton({ text, ...props }: CopyToClipboardButtonProps) {
 
   return (
     <>
-      {isCopied ? (
-        <CopyCheck
-          {...props}
-          className={cn(buttonStyle, props.className)}
-          onClick={handleCopy}
-        ></CopyCheck>
-      ) : (
-        <CopyIcon
-          {...props}
-          className={cn(buttonStyle, props.className)}
-          onClick={handleCopy}
-        ></CopyIcon>
-      )}
+      <span
+        className="shrink-0 size-14 border-[0.5px] border-[#D1D1ED1] bg-[#222222] hover:bg-[#2A2A2A] flex items-center justify-center rounded-md"
+        onClick={handleCopy}
+      >
+        {isCopied ? (
+          <CopyCheck
+            {...props}
+            className={cn(buttonStyle, props.className)}
+          ></CopyCheck>
+        ) : (
+          <CopyIcon
+            {...props}
+            className={cn(buttonStyle, props.className)}
+          ></CopyIcon>
+        )}
+      </span>
     </>
   );
 }
