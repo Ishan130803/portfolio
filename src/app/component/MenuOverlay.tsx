@@ -13,10 +13,10 @@ type MenuOverlayProps = {
 
 function MenuOverlay({ links }: MenuOverlayProps) {
   return (
-    <ul className="flex flex-col py-4 items-center ">
+    <ul className="flex flex-col py-4 items-center font-bold bg-[#121212]/75">
       {links.map((value, index) => {
         return (
-          <li key={index}>
+          <li key={index} className="hover:bg-[#222222] w-full self-center text-center  transition">
             <Navlink {...value}></Navlink>
           </li>
         );
