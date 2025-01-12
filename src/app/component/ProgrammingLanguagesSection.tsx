@@ -12,7 +12,7 @@ import { FaJava } from "react-icons/fa";
 function ProgrammingLanguagesSection() {
   return (
     <section
-      className="px-24 flex flex-col py-12 min-h-fit bg-[#121212] lg:bg-gradient-to-r lg:from-[#151515]  lg:via-[#151515] lg:to-[#080808]"
+      className="px-8 md:px-24 flex flex-col py-12 min-h-fit bg-[#121212] lg:bg-gradient-to-r lg:from-[#151515]  lg:via-[#151515] lg:to-[#080808]"
       id="about"
     >
       <h3 className="text-white text-4xl my-8 font-bold lg:self-center">

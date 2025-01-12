@@ -7,10 +7,10 @@ import { TypeAnimation } from "react-type-animation";
 
 function HeroSection() {
   return (
-    <section className="px-24 py-12 mx-auto">
+    <section className="px-8 md:px-24 py-12 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl lg:text-6xl font-extrabold sm:text-5xl">
+          <h1 className="text-white mb-4 text-3xl lg:text-6xl font-extrabold sm:text-5xl">
             <span className="bg-gradient-to-br from-purple-400 to-pink-600 bg-clip-text text-transparent">
               {"Hello, I'am "}
             </span>
@@ -23,7 +23,7 @@ function HeroSection() {
                 1000,
                 "Web Developer",
                 1000,
-                "ML Engineer",
+                "ML Enthusiast",
                 1000,
                 "Researcher",
                 1000,

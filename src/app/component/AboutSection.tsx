@@ -7,7 +7,7 @@ type AboutSectionProps = object;
 function AboutSection({}: AboutSectionProps) {
   return (
     <section
-      className="bg-[#151515] text-white grid md:grid-cols-2 gap-8 place-items-center py-8 px-28 xl:gap-16 sm:py-16 xl:px-16 xl:py-28"
+      className="px-8 md:px-24 bg-[#151515] text-white grid md:grid-cols-2 gap-8 place-items-center py-8 xl:gap-16 sm:py-16 xl:px-16 xl:py-28"
       id="about"
     >
       <Image

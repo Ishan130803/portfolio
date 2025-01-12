@@ -8,7 +8,7 @@ import { ProgrammingLanguagesSection } from "./component/ProgrammingLanguagesSec
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="relative flex flex-col items-center min-h-screen max-w-[2160px] bg-[#121212]">
       <Navbar></Navbar>
       <div className="py-4 mt-28">
         <HeroSection></HeroSection>

@@ -12,7 +12,7 @@ import {
 
 function TechStackSection() {
   return (
-    <section className="px-24 flex flex-col py-12 min-h-fit bg-[#151515] lg:via-[#151515] lg:bg-gradient-to-r lg:from-[#080808] lg:to-[#151515]">
+    <section className="px-8 md:px-24 flex flex-col py-12 min-h-fit bg-[#151515] lg:via-[#151515] lg:bg-gradient-to-r lg:from-[#080808] lg:to-[#151515]">
       <h3 className="text-white text-4xl my-8 font-bold lg:self-center">
         Tech Stack
       </h3>

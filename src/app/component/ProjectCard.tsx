@@ -67,7 +67,7 @@ function ProjectCard(props: ProjectCardProps) {
         })}
       >
         <ProjectDialog {...props} open={isExpanded} />
-        <div className="w-full min-w-52 h-52 flex items-center justify-center relative">
+        <div className="w-full h-52 flex items-center justify-center relative">
           {project_image ? (
             <Image
               src={project_image}

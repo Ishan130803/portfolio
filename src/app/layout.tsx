@@ -30,9 +30,9 @@ export default function RootLayout({
         <link rel="icon" href="TitleIcon.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212] w-full flex flex-col items-center`}
       >
-        <QueryClientProviderWrapper>{children}</QueryClientProviderWrapper>
+          <QueryClientProviderWrapper>{children}</QueryClientProviderWrapper>
       </body>
     </html>
   );

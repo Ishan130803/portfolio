@@ -13,7 +13,7 @@ function ProjectSection() {
   return (
     <section
       id="projects"
-      className="px-24 py-12 min-h-[calc(100vh-112px)] bg-[#121212]"
+      className="px-8 md:px-24 py-12 min-h-[calc(100vh-112px)] bg-[#121212]"
     >
       <h2 className="text-center text-4xl my-6 font-bold text-white ">
         My Projects
