@@ -2,6 +2,26 @@ import { ProjectSchema } from "@/types/schemas";
 
 export const projects: ProjectSchema[] = [
   {
+    project_title: "Portfolio",
+    tech_stack: ["nextjs", "react", "tailwind"],
+    project_description:
+      "This is my personal portfio website showcasing my profile and my projects I have done so far",
+    project_image: "/portfolio.png",
+    project_website_link: "https://ishan-srivastava.vercel.app",
+    readme_link:
+      "https://github.com/Ishan130803/portfolio/raw/refs/heads/main/README.md",
+  },
+  {
+    project_title: "Social Dash - Your place to connect",
+    tech_stack: ["nextjs", "react", "tailwind", "honojs", "tanstack query"],
+    project_github_link: "https://github.com/Ishan130803/SocialDash",
+    project_website_link: "https://social-dash-gamma.vercel.app",
+    project_description:
+      "A Simplistic social media platform made by me for learning purposes. Although lacking in features, it is fully responsive and most importantly fully working as of now. ",
+    readme_link:
+      "https://github.com/Ishan130803/SocialDash/raw/refs/heads/main/README.md",
+  },
+  {
     project_title: "Semantic Segmentation : CityScapes",
     tech_stack: ["numpy", "pandas", "tensorflow"],
     project_github_link:
@@ -75,5 +95,14 @@ export const projects: ProjectSchema[] = [
       "https://github.com/Ishan130803/Gesture-Drone-Controller",
     project_description:
       "A Gesture drone controller utility to control DJITellopy drone purely through gestures. Trained and developed a custom model using Tensorflow and obtained hand features using MediaPipe framework to identify gestures",
+  },
+  {
+    project_title: "AIWebChat - Chat with your websites !",
+    tech_stack: ["nextjs", "react", "tailwind"],
+    project_github_link: "https://github.com/Ishan130803/Web-RAG-Chat",
+    project_description:
+      "A Simplistic social media platform made by me for learning purposes. Although lacking in features, it is fully responsive and most importantly fully working as of now. ",
+    readme_link:
+      "https://github.com/Ishan130803/Web-RAG-Chat/raw/refs/heads/main/README.md",
   },
 ];

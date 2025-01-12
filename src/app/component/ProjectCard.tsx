@@ -19,8 +19,8 @@ import {
   TooltipProvider,
 } from "@/components/ui/tooltip";
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
-import { useQuery } from "@tanstack/react-query";
-import { getFile } from "@/features/api/actions";
+import remarkGfm from "remark-gfm";
+import { useGetReadmeFile } from "@/features/api/use-get-readme-file";
 
 type ProjectCardProps = ProjectSchema & {
   isExpanded: boolean;
@@ -43,14 +43,15 @@ function ProjectCard(props: ProjectCardProps) {
     <AvatarGroup
       className="-mr-2 "
       elements={tech_stack.map((item, index) => {
-        const Component = techstackIcons[item];
+        const Component = techstackIcons[item].icon;
+        const name = techstackIcons[item].name;
         return (
           <Tooltip delayDuration={500} key={index}>
             <TooltipTrigger>
               <Component className={"size-8 p-2 bg-[#151515] rounded-full "} />
             </TooltipTrigger>
             <TooltipContent className="bg-[#121212] text-white border-none font-mono font-medium">
-              {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
+              {name}
             </TooltipContent>
           </Tooltip>
         );
@@ -118,23 +119,20 @@ function ProjectDialog({
   readme_link,
 }: ProjectDialogProps) {
   tech_stack = tech_stack ?? [];
-  project_content ??= <></>;
+  const sanitized_project_content = <>{project_content}</>;
 
-  const query = useQuery({
-    queryKey: ["project_dialog", project_title],
-    queryFn: async () => {
-      const readme_url = readme_link;
-      const text = readme_url ? await getFile(readme_url) : null;
-      return text;
-    },
+  const readme_text = useGetReadmeFile({
+    project_title,
+    readme_url: readme_link,
   });
-  const readme_text = query.data as string | null;
+
   const techstackIconGroupComponent = (
     <AvatarGroup
       className="-mr-2 "
       max_limit={-1}
       elements={tech_stack.map((item, index) => {
-        const Component = techstackIcons[item];
+        const Component = techstackIcons[item].icon;
+        const name = techstackIcons[item].name;
         return (
           <Tooltip delayDuration={500} defaultOpen={false} key={index}>
             <TooltipTrigger>
@@ -143,7 +141,7 @@ function ProjectDialog({
               />
             </TooltipTrigger>
             <TooltipContent className="bg-[#121212] text-white border-none font-mono font-medium">
-              {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
+              {name}
             </TooltipContent>
           </Tooltip>
         );
@@ -221,13 +219,13 @@ function ProjectDialog({
             borderTopWidth: "1px",
           }}
         />
-        {readme_text ? (
-          <MarkdownRenderer className="w-full prose prose-a:text-blue-800 prose-p:text-white prose-headings:text-pink-300  prose-ol:text-white">
-            {readme_text}
-          </MarkdownRenderer>
-        ) : (
-          project_content
-        )}
+        {
+          <ProjectContent
+            readme_text={readme_text}
+            project_title={project_title}
+            project_content={sanitized_project_content}
+          />
+        }
       </DialogContent>
     </Dialog>
   );
@@ -252,5 +250,37 @@ function ProjectLinkButton({
         <span>{title}</span>
       </Button>
     </Link>
+  );
+}
+
+type ProjectContentProps = {
+  project_content?: React.JSX.Element;
+  readme_text?: string | null;
+  project_title?: string;
+};
+
+function ProjectContent({ project_content, readme_text }: ProjectContentProps) {
+  return readme_text ? (
+    <MarkdownRenderer
+      remarkPlugins={[remarkGfm]}
+      className="w-full prose prose-a:text-blue-800 prose-p:text-white prose-headings:text-pink-300 
+      prose-h1:border-white/25   
+      prose-h2:border-white/25   
+      prose-h3:border-white/25   
+      prose-h4:border-white/25   
+      prose-h1:border-b   
+      prose-h2:border-b   
+      prose-h3:border-b   
+      prose-h4:border-b   
+      prose-h1:pb-2        
+      prose-h2:pb-2    
+      prose-h3:pb-2    
+      prose-h4:pb-2        
+      prose-ol:text-white"
+    >
+      {readme_text}
+    </MarkdownRenderer>
+  ) : (
+    project_content
   );
 }

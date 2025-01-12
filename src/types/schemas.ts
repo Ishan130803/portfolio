@@ -7,7 +7,9 @@ export type frameworks =
   | "pandas"
   | "pytorch"
   | "mongodb"
-  | "sql";
+  | "sql"
+  | "tanstack query"
+  | "honojs"
 
 export type ProjectSchema = {
   project_title?: string;
