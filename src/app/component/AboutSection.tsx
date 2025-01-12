@@ -19,7 +19,7 @@ function AboutSection({}: AboutSectionProps) {
       ></Image>
       <div>
         <div className="flex flex-col">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-br from-purple-400 to-pink-600 bg-clip-text text-transparent">About Me</h2>
           <div className="text-base lg:text-lg">
             <p>
               I am Ishan Srivastava, a student of Delhi Technological

@@ -5,7 +5,7 @@ import { ProjectCard } from "./ProjectCard";
 import { projects } from "@/data/project-data";
 import { ProjectSchema } from "@/types/schemas";
 
-const projectsData: ProjectSchema[] = projects
+const projectsData: ProjectSchema[] = projects;
 
 function ProjectSection() {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(-1);
@@ -13,9 +13,9 @@ function ProjectSection() {
   return (
     <section
       id="projects"
-      className="px-8 md:px-24 py-12 min-h-[calc(100vh-112px)] bg-[#121212]"
+      className="px-8 md:px-24 py-12 min-h-[calc(100vh-112px)] bg-[#151515]"
     >
-      <h2 className="text-center text-4xl my-6 font-bold text-white ">
+      <h2 className="text-center text-4xl pb-12 font-bold bg-gradient-to-br from-purple-400 to-pink-600 bg-clip-text text-transparent ">
         My Projects
       </h2>
       {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">

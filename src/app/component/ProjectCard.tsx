@@ -62,7 +62,7 @@ function ProjectCard(props: ProjectCardProps) {
   return (
     <TooltipProvider>
       <div
-        className={cn("flex flex-col size-full bg-[#151515] rounded-xl", {
+        className={cn("flex flex-col size-full bg-[#101010] rounded-xl", {
           "": isExpanded,
         })}
       >

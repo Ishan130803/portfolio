@@ -16,7 +16,7 @@ import { FaGithub, FaKaggle, FaInstagram, FaLinkedin } from "react-icons/fa";
 function EmailSection() {
   return (
     <section
-      className="px-8 md:px-24 bg-[#151515] grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
+      className="px-8 md:px-24 bg-[#121212] grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
       id="contact"
     >
       <div className="place-items-start">
