@@ -16,10 +16,10 @@ import { FaGithub, FaKaggle, FaInstagram, FaLinkedin } from "react-icons/fa";
 function EmailSection() {
   return (
     <section
-      className="px-8 md:px-24 bg-[#121212] grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
+      className="px-8 md:px-24 bg-[#121212] grid lg:grid-cols-2 my-12 md:my-12 py-24 gap-4"
       id="contact"
     >
-      <div className="place-items-start">
+      <div className="place-items-center lg:place-items-start">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
         </h5>
@@ -29,8 +29,8 @@ function EmailSection() {
           try my best to get back to you!
         </p>
       </div>
-      <div className="flex flex-col gap-4 w-full place-items-end">
-        <div className="self-end">
+      <div className="flex flex-col gap-4 w-full place-items-center lg:place-items-end">
+        <div className="">
           <div className="flex w-full items-center gap-2">
             {/* <Button className="flex items-center h-full border-none hover:bg-blue-600 bg-blue-600">
             <MdEmail className="size-6" />
