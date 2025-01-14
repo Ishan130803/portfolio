@@ -35,7 +35,7 @@ function SkillBadge({ children }: SkillBadgeProps) {
      rounded-full flex gap-2 items-center justify-center bg-[#151515] hover:bg-gradient-to-b hover:from-current hover:to-[#121212] transition duration-200"
     >
       {<FaCircle className="size-3 text-blue-500" />}
-      <span className="text-white font-bold text-lg capitalize select-none ">
+      <span className="text-white font-bold text-lg capitalize select-none text-center">
         {children}
       </span>
     </div>
