@@ -3,7 +3,7 @@ import { ProjectSchema } from "@/types/schemas";
 export const projects: ProjectSchema[] = [
   {
     project_title: "Portfolio",
-    tech_stack: ["nextjs", "react", "tailwind"],
+    tech_stack: ["nextjs", "react", "tailwind","tanstack query"],
     project_description:
       "This is my personal portfio website showcasing my profile and my projects I have done so far",
     project_image: "/portfolio.png",
