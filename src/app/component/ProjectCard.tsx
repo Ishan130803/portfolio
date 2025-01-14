@@ -214,7 +214,7 @@ function ProjectDialog({
           {project_other_links}
         </div>
         <span
-          className=" h-2 my-4 border-white/25"
+          className=" h-2 my-4 border-white/100"
           style={{
             borderTopWidth: "1px",
           }}
@@ -263,7 +263,11 @@ function ProjectContent({ project_content, readme_text }: ProjectContentProps) {
   return readme_text ? (
     <MarkdownRenderer
       remarkPlugins={[remarkGfm]}
-      className="w-full prose prose-a:text-blue-800 prose-p:text-white prose-headings:text-pink-300 
+      className="
+      prose w-full max-w-full 
+      prose-a:text-blue-800 
+      prose-p:text-white 
+      prose-headings:text-pink-300 
       prose-h1:border-white/25   
       prose-h2:border-white/25   
       prose-h3:border-white/25   

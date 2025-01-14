@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {  useState } from "react";
+import { useState } from "react";
 import { Navlink } from "./Navlink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { MenuOverlay } from "./MenuOverlay";
@@ -27,54 +27,56 @@ const navlinks = [
 function Navbar({}: NavbarProps) {
   const [navBarOpen, setNavBarOpen] = useState<boolean>(false);
   return (
-    <nav className="fixed backdrop-blur-sm w-full top-0 left-0 right-0 z-10 mx-auto bg-[#121212]/90 h-28 backdrop:opacity-100  ">
-      <div className="flex flex-wrap justify-between items-center mx-auto p-6">
-        <div className="flex">
-          <Link
-            href={"/"}
-            className="text-2xl md:text-4xl text-white font-semibold"
-          >
-            <MyLOGO />
-          </Link>
-          <span className="text-white self-center pl-2 text-2xl md:text-3xl font-bold">
-            han Srivastava
-          </span>
-        </div>
-        <div className="mobile-menu block md:hidden">
-          {navBarOpen ? (
-            <button
-              className="text-slate-200 flex items-center px-3 py-2 border rounded border-slate-200 hover:text-white  hover:border-white"
-              onClick={() => {
-                setNavBarOpen(false);
-              }}
+    <>
+      <nav className="fixed w-full top-0 left-0 right-0 z-10 mx-auto min-h-28 bg-[#121212]">
+        <div className="flex flex-wrap justify-between items-center mx-auto p-6 ">
+          <div className="flex">
+            <Link
+              href={"/"}
+              className="text-2xl md:text-4xl text-white font-semibold"
             >
-              <XMarkIcon className="h-5 w-5"></XMarkIcon>
-            </button>
-          ) : (
-            <button
-              className="text-slate-200 flex items-center px-3 py-2 border rounded border-slate-200 hover:text-white  hover:border-white"
-              onClick={() => {
-                setNavBarOpen(true);
-              }}
-            >
-              <Bars3Icon className="h-5 w-5"></Bars3Icon>
-            </button>
-          )}
+              <MyLOGO />
+            </Link>
+            <span className="text-white self-center pl-2 text-2xl md:text-3xl font-bold">
+              han Srivastava
+            </span>
+          </div>
+          <div className="mobile-menu block md:hidden">
+            {navBarOpen ? (
+              <button
+                className="text-slate-200 flex items-center px-3 py-2 border rounded border-slate-200 hover:text-white  hover:border-white"
+                onClick={() => {
+                  setNavBarOpen(false);
+                }}
+              >
+                <XMarkIcon className="h-5 w-5"></XMarkIcon>
+              </button>
+            ) : (
+              <button
+                className="text-slate-200 flex items-center px-3 py-2 border rounded border-slate-200 hover:text-white  hover:border-white"
+                onClick={() => {
+                  setNavBarOpen(true);
+                }}
+              >
+                <Bars3Icon className="h-5 w-5"></Bars3Icon>
+              </button>
+            )}
+          </div>
+          <div className="menu hidden md:block">
+            <ul className="flex p-4 md:p-0 flex-row md:flex-row md:space-x-8 mt-0">
+              {navlinks.map((value, index) => {
+                return (
+                  <li key={index}>
+                    <Navlink {...value}></Navlink>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
-        <div className="menu hidden md:block">
-          <ul className="flex p-4 md:p-0 flex-row md:flex-row md:space-x-8 mt-0">
-            {navlinks.map((value, index) => {
-              return (
-                <li key={index}>
-                  <Navlink {...value}></Navlink>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-      {navBarOpen && <MenuOverlay links={navlinks} />}
-    </nav>
+        {navBarOpen && <MenuOverlay links={navlinks} />}
+      </nav>
+    </>
   );
 }
 
