@@ -60,7 +60,7 @@ function HeroSection() {
             <Image
               className="object-contain"
               alt={"My Image"}
-              src={"/Hero-Placeholder.png"}
+              src={"/hero-section-image.avif"}
               width={300}
               height={300}
             ></Image>

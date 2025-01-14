@@ -30,6 +30,7 @@ export const projects: ProjectSchema[] = [
     project_github_link: "https://github.com/Ishan130803/One-Mint",
     readme_link:
       "https://github.com/Ishan130803/One-Mint/raw/refs/heads/main/README.md",
+    project_website_link: "https://one-mint.vercel.app"
   },
   {
     project_title: "Social Dash - Your place to connect",
