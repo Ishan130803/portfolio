@@ -12,6 +12,26 @@ export const projects: ProjectSchema[] = [
       "https://github.com/Ishan130803/portfolio/raw/refs/heads/main/README.md",
   },
   {
+    project_title: "Lunar Crater Segmentation(WIP)",
+    tech_stack: ["tensorflow", "numpy", "pandas"],
+    project_description:
+      "This application segments craters and displays various metrics related to them on Chandrayaan's OHRC images.",
+    project_github_link:
+      "https://github.com/Ishan130803/Lunar-Crater-Segmentation",
+    readme_link:
+      "https://github.com/Ishan130803/Lunar-Crater-Segmentation/raw/refs/heads/main/README.md",
+  },
+  {
+    project_title:
+      "One-Mint - Your universal project manager and organizer(WIP)",
+    tech_stack: ["nextjs", "react", "tailwind", "honojs", "tanstack query"],
+    project_description:
+      "Your universal project manager application to streamline your workflow. Manage your projects, assign projects, collaborate on projects and Keep track of tasks",
+    project_github_link: "https://github.com/Ishan130803/One-Mint",
+    readme_link:
+      "https://github.com/Ishan130803/One-Mint/raw/refs/heads/main/README.md",
+  },
+  {
     project_title: "Social Dash - Your place to connect",
     tech_stack: ["nextjs", "react", "tailwind", "honojs", "tanstack query"],
     project_github_link: "https://github.com/Ishan130803/SocialDash",
