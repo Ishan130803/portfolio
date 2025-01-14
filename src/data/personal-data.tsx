@@ -3,9 +3,9 @@ export const LINKEDIN_URL =
   "https://www.linkedin.com/in/ishan-srivastava-baa7a3276";
 export const INSTAGRAM_URL = "https://www.instagram.com/i_shan_1308/";
 export const KAGGLE_URL = "https://www.kaggle.com/ishansrivastava1308";
-export const GITHUB_URL ="https://github.com/Ishan130803";
-export const RESUME_LINK ="https://docs.google.com/document/d/1-9gh_PS2NrIq-Ohfc006J08QeDyr5FznalK0WyNz8MM/edit?tab=t.0";
-
+export const GITHUB_URL = "https://github.com/Ishan130803";
+export const RESUME_LINK =
+  "https://drive.google.com/file/d/1lHHFL65XKnheg4zHOhfeC0tDriQ8Qvo7/view?usp=drive_link";
 
 export const mySkills = [
   "CNNs",
@@ -19,4 +19,4 @@ export const mySkills = [
   "Back-End Web Development",
   "Algorithm Analysis and Design",
   "Database Management",
-]
+];
