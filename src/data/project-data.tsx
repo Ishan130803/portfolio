@@ -10,6 +10,7 @@ export const projects: ProjectSchema[] = [
     project_website_link: "https://ishan-srivastava.vercel.app",
     readme_link:
       "https://github.com/Ishan130803/portfolio/raw/refs/heads/main/README.md",
+    project_github_link: "https://github.com/Ishan130803/portfolio"
   },
   {
     project_title: "Lunar Crater Segmentation(WIP)",
