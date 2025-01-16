@@ -58,7 +58,7 @@ export const projects: ProjectSchema[] = [
   },
   {
     project_title:
-      "Cloud Coverage Detection using Encoder-Recoder Architecture",
+      "Cloud Coverage Detection using Encoder-Decoder Architecture",
     tech_stack: ["numpy", "pandas", "tensorflow"],
     project_github_link:
       "https://github.com/Ishan130803/CCD-Cloud-Coverage-Detection",
