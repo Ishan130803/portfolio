@@ -21,8 +21,7 @@ import {
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
 import remarkGfm from "remark-gfm";
 import { useGetReadmeFile } from "@/features/api/use-get-readme-file";
-import rehypeRaw from "rehype-raw"
-
+import rehypeRaw from "rehype-raw";
 
 type ProjectCardProps = ProjectSchema & {
   isExpanded: boolean;
@@ -269,6 +268,7 @@ function ProjectContent({ project_content, readme_text }: ProjectContentProps) {
       className="
       text-white
       prose w-full max-w-full 
+      prose-strong:text-violet-500
       prose-a:text-blue-800 
       prose-p:text-white 
       prose-headings:text-pink-300 
